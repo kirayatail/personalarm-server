@@ -1,4 +1,4 @@
-package edu.chl.wmax.personalarm.server;
+package edu.chl.wmax.personalarm.server.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
