@@ -21,4 +21,38 @@ public class FriendController {
 	public String index() {
 		return "friend/index";
 	}
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String listFriends(){
+		// Get all friends, return a list of them
+		return null;
+	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+	public String removeFriend(@PathVariable long id) {
+		// Remove friend linking
+		return null;
+	}
+	
+	@RequestMapping(value = "/req", method = RequestMethod.POST)
+	public String createRequest() {
+		return "friend/index";
+	}
+	
+	@RequestMapping(value = "/req", method = RequestMethod.GET)
+	public String listRequests(){
+		// Get all friends, return a list of them
+		return null;
+	}
+	
+	@RequestMapping(value = "/req/{id}", method = RequestMethod.POST)
+	public String acceptRequest(@PathVariable long id){
+		return null;
+	}
+	
+	@RequestMapping(value = "/req/{id}", method = RequestMethod.DELETE)
+	public String removeRequest(@PathVariable long id) {
+		// Remove friend linking
+		return null;
+	}
 }
