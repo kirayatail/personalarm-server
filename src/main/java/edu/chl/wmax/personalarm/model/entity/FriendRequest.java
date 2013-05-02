@@ -1,13 +1,18 @@
 package edu.chl.wmax.personalarm.model.entity;
 
 import java.io.Serializable;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
 import edu.chl.wmax.personalarm.model.entity.User;
 
 public class FriendRequest implements Serializable, IEntity<String> {
 
-	//@Id
-	//@NotNull
-	private Integer Id;
+	@Id
+	@NotNull
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long Id;
 	
 	private User sender;
 	private User receiver;
