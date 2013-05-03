@@ -14,7 +14,7 @@ public class UserController {
 		return null;
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	@ResponseBody
 	public String list() {
 
@@ -23,7 +23,7 @@ public class UserController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	public String show(@PathVariable int ident) {
+	public String show(@PathVariable("id") int ident) {
 
 		return "{user: {id: " + ident + " } }";
 	}
