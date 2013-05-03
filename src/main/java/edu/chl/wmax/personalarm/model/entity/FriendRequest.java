@@ -7,8 +7,8 @@ import javax.validation.constraints.NotNull;
 
 import edu.chl.wmax.personalarm.model.entity.User;
 
-public class FriendRequest implements Serializable, IEntity<String> {
-
+public class FriendRequest implements Serializable, IEntity<Long> {
+	
 	@Id
 	@NotNull
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,19 +21,16 @@ public class FriendRequest implements Serializable, IEntity<String> {
 	public FriendRequest(User sender, User receiver) {
 		this.setSender(sender);
 		this.setReceiver(receiver);
-		// Set id?
 	}
 	
 	@Override
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
+	public Long getId() {
+		return Id;
 	}
 
 	@Override
-	public void setId(String id) {
-		// TODO Auto-generated method stub
-		
+	public void setId(Long id) {
+		this.Id = id;
 	}
 
 	public User getSender() {
