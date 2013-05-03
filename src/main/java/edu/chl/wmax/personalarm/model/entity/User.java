@@ -10,7 +10,7 @@ import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "PAUser")
-public class User implements Serializable, IEntity<String> {
+public class User implements Serializable, IEntity<Integer> {
 
 	@Id
 	@NotNull
@@ -18,19 +18,39 @@ public class User implements Serializable, IEntity<String> {
 	
 	private List<User> friends;
 	
+	private String name;
+	private String email;
+	private String password;
+	
 	public User(){
 		this.friends = new ArrayList<User>();
 	}
 	@Override
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer getId() {
+		return this.id;
 	}
 
 	@Override
-	public void setId(String id) {
-		// TODO Auto-generated method stub
-		
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

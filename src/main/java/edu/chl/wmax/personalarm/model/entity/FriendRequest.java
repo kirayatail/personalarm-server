@@ -3,11 +3,11 @@ package edu.chl.wmax.personalarm.model.entity;
 import java.io.Serializable;
 import edu.chl.wmax.personalarm.model.entity.User;
 
-public class FriendRequest implements Serializable, IEntity<String> {
+public class FriendRequest implements Serializable, IEntity<Integer> {
 
 	//@Id
 	//@NotNull
-	private Integer Id;
+	private Integer id;
 	
 	private User sender;
 	private User receiver;
@@ -16,19 +16,16 @@ public class FriendRequest implements Serializable, IEntity<String> {
 	public FriendRequest(User sender, User receiver) {
 		this.setSender(sender);
 		this.setReceiver(receiver);
-		// Set id?
 	}
 	
 	@Override
-	public String getId() {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer getId() {
+		return id;
 	}
 
 	@Override
-	public void setId(String id) {
-		// TODO Auto-generated method stub
-		
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public User getSender() {
